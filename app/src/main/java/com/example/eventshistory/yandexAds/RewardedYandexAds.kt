@@ -16,21 +16,16 @@ class RewardedYandexAds(
 
     init { configureRewardedAd() }
 
-    fun show(){ loadRewardedAd() }
+    fun show() = loadRewardedAd()
 
-    private fun loadRewardedAd(){
-        rewardedAd?.loadAd(AdRequest.Builder().build())
-    }
+    private fun loadRewardedAd() = rewardedAd?.loadAd(AdRequest.Builder().build())
 
     private fun configureRewardedAd() {
         rewardedAd?.setAdUnitId(AD_UNIT_ID)
         rewardedAd?.setRewardedAdEventListener(this)
     }
 
-    private companion object {
-
-        const val AD_UNIT_ID = "R-M-1667338-1"
-    }
+    private companion object { const val AD_UNIT_ID = "R-M-1997536-1" }
 
     override fun onAdLoaded() { rewardedAd?.show() }
 

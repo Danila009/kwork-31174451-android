@@ -122,8 +122,8 @@ fun MainScreen(
                     ).asImageBitmap(),
                     contentDescription = null,
                     modifier = Modifier.size(
-                        width = (screenWidthDp / 1.8).dp,
-                        height = (screenHeightDp / 1.8).dp
+                        width = (screenWidthDp / 2).dp,
+                        height = (screenHeightDp / 1.7).dp
                     )
                 )
 
@@ -133,7 +133,7 @@ fun MainScreen(
                             Image(
                                 bitmap = Bitmap.createScaledBitmap(
                                     BitmapFactory.decodeResource(context.resources,R.drawable.further),
-                                    screenWidthDp / 5,
+                                    (screenWidthDp / 4.5).toInt(),
                                     screenHeightDp / 15,
                                     false
                                 ).asImageBitmap(),
@@ -141,11 +141,10 @@ fun MainScreen(
                                 modifier = Modifier
                                     .padding(
                                         top = 5.dp,
-                                        bottom = 5.dp,
-                                        end = 5.dp
+                                        bottom = 5.dp
                                     )
                                     .height((screenHeightDp / 14.5).dp)
-                                    .width((screenWidthDp / 4.2).dp)
+                                    .width((screenWidthDp / 4.5).dp)
                                     .clickable { count++ }
                             )
 
@@ -155,11 +154,10 @@ fun MainScreen(
                                 modifier = Modifier
                                     .padding(
                                         top = 5.dp,
-                                        bottom = 5.dp,
-                                        end = 5.dp
+                                        bottom = 5.dp
                                     )
                                     .height((screenHeightDp / 14.5).dp)
-                                    .width((screenWidthDp / 4.2).dp)
+                                    .width((screenWidthDp / 4.5).dp)
                                     .clickable { count++ }
                             ) {
                                 Text(
@@ -174,24 +172,32 @@ fun MainScreen(
                             Image(
                                 bitmap = Bitmap.createScaledBitmap(
                                     BitmapFactory.decodeResource(context.resources,R.drawable.count_click),
-                                    screenWidthDp / 5,
+                                    (screenWidthDp / 5).toInt(),
                                     screenHeightDp / 15,
                                     false
                                 ).asImageBitmap(),
                                 contentDescription = null,
                                 modifier = Modifier
-                                    .padding(5.dp)
+                                    .padding(
+                                        top = 5.dp,
+                                        bottom = 5.dp,
+                                        end = 5.dp
+                                    )
                                     .height((screenHeightDp / 14.5).dp)
-                                    .width((screenWidthDp / 4.5).dp)
+                                    .width((screenWidthDp / 5).dp)
                             )
 
                             Column(
                                 horizontalAlignment = Alignment.CenterHorizontally,
                                 verticalArrangement = Arrangement.Center,
                                 modifier = Modifier
-                                    .padding(5.dp)
+                                    .padding(
+                                        top = 5.dp,
+                                        bottom = 5.dp,
+                                        end = 5.dp
+                                    )
                                     .height((screenHeightDp / 14.5).dp)
-                                    .width((screenWidthDp / 4.5).dp)
+                                    .width((screenWidthDp / 5).dp)
                             ) {
                                 Text(
                                     text = "$count/50",
@@ -206,8 +212,8 @@ fun MainScreen(
                         Image(
                             bitmap = Bitmap.createScaledBitmap(
                                 BitmapFactory.decodeResource(context.resources,R.drawable.skip),
-                                screenWidthDp / 2,
-                                screenHeightDp / 13,
+                                (screenWidthDp / 2.4).toInt(),
+                                (screenHeightDp / 13).toInt(),
                                 false
                             ).asImageBitmap(),
                             contentDescription = null,
@@ -217,8 +223,8 @@ fun MainScreen(
                                     bottom = 5.dp,
                                     end = 5.dp
                                 )
-                                .height((screenHeightDp / 12).dp)
-                                .width((screenWidthDp / 2.2).dp)
+                                .height((screenHeightDp / 13).dp)
+                                .width((screenWidthDp / 2.4).dp)
                                 .clickable {
                                     dialogADSVisibility = true
                                 }
@@ -233,8 +239,8 @@ fun MainScreen(
                                     bottom = 5.dp,
                                     end = 5.dp
                                 )
-                                .height((screenHeightDp / 12).dp)
-                                .width((screenWidthDp / 2.2).dp)
+                                .height((screenHeightDp / 13).dp)
+                                .width((screenWidthDp / 2.4).dp)
                                 .clickable {
                                     dialogADSVisibility = true
                                 }
